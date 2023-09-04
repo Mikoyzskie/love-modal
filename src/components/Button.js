@@ -1,9 +1,9 @@
-import './App.css';
 import React, { useState } from 'react';
 import { CSSTransition } from 'react-transition-group';
+import "../index.css"
 
-function App() {
 
+function Button() {
   const [showModal, setShowModal] = useState(false);
 
   const openModal = () => {
@@ -15,8 +15,7 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <div>
+    <div>
       <button
         onClick={openModal}
         className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
@@ -37,13 +36,12 @@ function App() {
             >
               &times;
             </span>
-            <p>I love you; HEhehehehehe waala ako magawa</p>
+            <p>I love you</p>
           </div>
         </div>
       </CSSTransition>
     </div>
-    </div>
   );
 }
 
-export default App;
+export default Button;
